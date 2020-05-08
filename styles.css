@@ -1,6 +1,7 @@
+
+
 .one,
-.three,
-.five {
+.three {
   background: linear-gradient(-45deg, transparent 25%, white 25%, white 75%, transparent 75%, transparent 100%);
 }
 
@@ -11,16 +12,27 @@
 }
 
 
-
-h2, 
-p {
+h2 {
   font-family: 'Roboto', sans-serif;
-  font-size: 58px;
+  font-size: 40px;
   max-width: 830px;
   padding: 0 15px;
   margin: 0 auto;
-  height: 64px;
+  height: 60px;
   overflow: hidden;
+  line-height: 3.5;
+  -webkit-transition: line-height 0.85s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: line-height 0.85s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  max-width: 830px;
+  padding: 0 15px;
+  margin: 0 auto;
+  height: 100px;
+  overflow: visible;
   line-height: 3.5;
   -webkit-transition: line-height 0.85s cubic-bezier(0.77, 0, 0.175, 1);
   transition: line-height 0.85s cubic-bezier(0.77, 0, 0.175, 1);
@@ -34,7 +46,7 @@ h2 {
 
 p {
   margin-top: -6px;
-  font-weight: 300;
+  font-weight: 100;
   -webkit-transition-delay: .8s;
           transition-delay: .8s;
 }
@@ -43,3 +55,12 @@ p {
 .section.active p {
   line-height: 1;
 }
+
+#socialBtn {
+  position: absolute;
+  right: 20px;
+  height: 20px;
+  top: 48%;
+
+  z-index: 2;
+} 

@@ -5,48 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" type="text/css" href="fullpage.css" />
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="fullpage.css" />
+    <link rel="stylesheet" href="styles.css" />
+    
     
 
     <title>Hi, My Name is Ellen.</title>
 </head>
 <body>
 
-<div id="fullpage">
-    <div class="section one">
-        <h2>Hi! My name is Ellen.</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti fuga tenetur repellat laudantium, consequuntur quisquam cum, temporibus reiciendis fugiat at neque molestiae laboriosam sequi unde harum omnis id consequatur totam.</p>
+    <div id="socialBtn">
+        <div class="row justify-content-center">
+            <a id="linkedin" class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/ellen-yi-hsuan-tseng/" target="_blank">
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="row justify-content-center">
+            <a id="github" class="btn btn-social-icon btn-github" href="https://github.com/yhtseng1101" target="_blank">
+                <i class="fa fa-github-square" aria-hidden="true"></i>
+            </a>
+        </div>
     </div>
 
-    <div class="section two">
-        <h2>This is me.</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et iusto earum voluptas quibusdam quis, molestiae tempore eos, dolore aliquid quam reiciendis voluptatum error modi excepturi amet magni veritatis ab quo.</p>
+    <div id="fullpage">
+        
+        <div class="section one">
+            <h2>Hi, My name is Ellen.</h2>
+            <p>I am a front-end developer.</p>
+            <a href="#projects"><button type="button" class="btn btn-light" >See My Projects</button></a>
+        </div>
+
+        <div class="section two">
+            <h2>This is me.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et iusto earum voluptas quibusdam quis, molestiae tempore eos, dolore aliquid quam reiciendis voluptatum error modi excepturi amet magni veritatis ab quo.</p>
+        </div>
+
+        <div class="section three">
+            <h2>Here are my projects.</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis minima quis voluptatibus non impedit, consequatur numquam suscipit accusantium, exercitationem culpa deserunt. Officiis sequi, alias doloremque illum nihil vero soluta libero.</p>
+        </div>
+
+        <div class="section four">
+            <h2>This is my GitHub page.</h2>
+            <h2>Here are my contact.</h2>
+            <p>Please reach out to me on Linkedin or by e-mail.</p>
+        </div>
     </div>
 
-    <div class="section three">
-        <h2>Here are my projects.</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis minima quis voluptatibus non impedit, consequatur numquam suscipit accusantium, exercitationem culpa deserunt. Officiis sequi, alias doloremque illum nihil vero soluta libero.</p>
-    </div>
 
-    <div class="section four">
-        <h2>This is my GitHub page.</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate corrupti fugiat dicta assumenda aspernatur, ipsa earum nesciunt facilis amet vel porro quos tempora nam error inventore quo reprehenderit, magni harum.</p>
-    </div>
 
-    <div class="section five">
-        <h2>Here are my contact.</h2>
-        <p>Please reach out to me on Linkedin or by e-mail.</p>
-    </div>
-</div>
+    <script type="text/javascript" src="fullpage.js"></script>
+    <script type="text/javascript" src="index.js"></script>
 
-<script type="text/javascript" src="fullpage.js"></script>
-<script>
-        new fullpage('#fullpage', {
-            sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff']
-    });
+    <script>
+            new fullpage('#fullpage', {
+                // sectionsColor: ['#4BBFC3', '#7BAABE', '#ccddff', '#4BBFC3'],
+                sectionsColor: ['#255665', '#3A849E','#255665', '#3A849E'],
+                menu: '#menu',
+                anchors:['intro', 'aboutMe', 'projects', ],
+                navigation: true,
+                navigationPosition: 'left',
+                navigationTooltips: ['Intro', 'About Me', 'Projects', 'Contact'],
+                showActiveTooltip: false,
+                loopBottom: true,
+                
+        });
+    </script>
 
-</script>
 
 </body>
 </html>
