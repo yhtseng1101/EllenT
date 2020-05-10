@@ -1,45 +1,47 @@
-
-
+/* background */
 .one,
 .three {
   background: linear-gradient(-45deg, transparent 25%, white 25%, white 75%, transparent 75%, transparent 100%);
 }
 
-.two,
-.four {
+.two {
   background: linear-gradient(45deg, transparent 25%, white 25%, white 75%, transparent 75%, transparent 100%);
   text-align: right;
 }
 
+/* text arrangement */
+body {
+  font-family: 'Sirin Stencil', cursive;
+}
 
 h2 {
-  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   font-size: 40px;
   max-width: 830px;
   padding: 0 15px;
   margin: 0 auto;
   height: 60px;
   overflow: hidden;
-  line-height: 3.5;
+  line-height: 4;
   -webkit-transition: line-height 0.85s cubic-bezier(0.77, 0, 0.175, 1);
   transition: line-height 0.85s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 p {
-  font-family: 'Roboto', sans-serif;
   font-size: 20px;
   max-width: 830px;
   padding: 0 15px;
   margin: 0 auto;
-  height: 100px;
-  overflow: visible;
-  line-height: 3.5;
+  height: 60px;
+  overflow: hidden;
+  line-height: 4;
   -webkit-transition: line-height 0.85s cubic-bezier(0.77, 0, 0.175, 1);
   transition: line-height 0.85s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
+/* text transition */
+
 h2 {
-  font-weight: 100;
   -webkit-transition-delay: .3s;
           transition-delay: .3s;
 }
@@ -56,11 +58,75 @@ p {
   line-height: 1;
 }
 
-#socialBtn {
+/* buttons */
+
+#linkedinBtn {
   position: absolute;
   right: 20px;
-  height: 20px;
-  top: 48%;
-
+  top: 45%;
   z-index: 2;
 } 
+
+#githubBtn {
+  position: absolute;
+  right: 20px;
+  top: 49%;
+  z-index: 2;
+} 
+
+#linkedin {
+  border-color: rgba(233, 232, 36, 0.3);
+}
+
+#github {
+  border-color: rgba(233, 232, 36, 0.3);
+}
+
+@keyframes btnColor {
+  0% {background-color: #3B859F;
+       color: #E9E824;}
+  50% {background-color: yellow;
+        color: #3B859F}
+  100% {background-color: #3B859F;
+    color: #E9E824;}
+}
+
+#projectBtn {
+  color: #E9E824;
+  background-color: #3B859F;
+  border-color: rgba(233, 232, 36, 0.3);
+  font-family: 'Sirin Stencil', cursive;
+  position: absolute;
+  left: 48%;
+  top: 85%;
+}
+
+#projectBtn:hover {
+  /* color:#3B859F;
+  background-color: #E9E824; */
+  /* transform: background-color 500ms linear 1s; */
+  animation-name: btnColor;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span
+{
+  background: rgba(233, 232, 36, 0.6);
+}
+
+#email {
+  font-size: 1.5em;
+  position: absolute;
+  left: 40%;
+  top: 85%;
+}
+
+#resume {
+  font-size: 1.5em;
+  position: absolute;
+  left: 48%;
+  top: 85%;
+}
+

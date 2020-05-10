@@ -8,25 +8,27 @@
     <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" /> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" /> -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <!-- <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css" />
     <link rel="stylesheet" href="fullpage.css" />
     <link rel="stylesheet" href="styles.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Sirin+Stencil&display=swap" rel="stylesheet">
     
     <title>Hi, My Name is Ellen.</title>
 </head>
 <body>
 
-    <div id="socialBtn">
-        <div class="row justify-content-center">
+    <div>
+        <div id="linkedinBtn">
             <a id="linkedin" class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/ellen-yi-hsuan-tseng/" target="_blank">
-                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                <i class="fab fa-linkedin-in"></i>
             </a>
         </div>
-        <div class="row justify-content-center">
+        <div id="githubBtn">
             <a id="github" class="btn btn-social-icon btn-github" href="https://github.com/yhtseng1101" target="_blank">
-                <i class="fa fa-github-square" aria-hidden="true"></i>
+                <i class="fab fa-github"></i>
             </a>
         </div>
     </div>
@@ -35,24 +37,21 @@
         
         <div class="section one">
             <h2>Hi, My name is Ellen.</h2>
-            <p>I am a front-end developer.</p>
-            <a href="#projects"><button type="button" class="btn btn-light" >See My Projects</button></a>
+            <p>I am a front-end developer. <br />
+                I love digging into the inconvenience of people's lives and trying to come up with a solution to them. I am learning to achieve these improvements through software development. </p>
+                <span><a href="#projects" class="btn btn-md" id="projectBtn">View My Projects <i class="fas fa-arrow-circle-down"></i></a></span>
         </div>
 
         <div class="section two">
-            <h2>This is me.</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et iusto earum voluptas quibusdam quis, molestiae tempore eos, dolore aliquid quam reiciendis voluptatum error modi excepturi amet magni veritatis ab quo.</p>
-        </div>
-
-        <div class="section three">
-            <h2>Here are my projects.</h2>
+            <h2>Projects.</h2>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis minima quis voluptatibus non impedit, consequatur numquam suscipit accusantium, exercitationem culpa deserunt. Officiis sequi, alias doloremque illum nihil vero soluta libero.</p>
         </div>
 
-        <div class="section four">
-            <h2>This is my GitHub page.</h2>
-            <h2>Here are my contact.</h2>
+        <div class="section three">
+            <h2>Contact.</h2>
             <p>Please reach out to me on Linkedin or by e-mail.</p>
+            <span id="email" ><a href="https://github.com/yhtseng1101" target="_blank"><i class="fas fa-envelope"></i> Email </a></span>
+            <span id="resume"><a  href="CV/Resume.pdf" target="_blank"><i class="fas fa-file-user"></i> Resume </a></span>
         </div>
     </div>
 
@@ -63,12 +62,12 @@
     <script>
             new fullpage('#fullpage', {
                 // sectionsColor: ['#4BBFC3', '#7BAABE', '#ccddff', '#4BBFC3'],
-                sectionsColor: ['#255665', '#3A849E','#255665', '#3A849E'],
+                sectionsColor: ['#255665', '#3A849E','#255665'],
                 menu: '#menu',
-                anchors:['intro', 'aboutMe', 'projects', ],
+                anchors:['about', 'projects', 'contact'],
                 navigation: true,
                 navigationPosition: 'left',
-                navigationTooltips: ['Intro', 'About Me', 'Projects', 'Contact'],
+                navigationTooltips: ['About Me', 'Projects', 'Contact'],
                 showActiveTooltip: false,
                 loopBottom: true,
                 
