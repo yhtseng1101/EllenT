@@ -22,41 +22,44 @@ h2 {
   margin: 0 auto;
   height: 60px;
   overflow: hidden;
-  line-height: 4;
-  -webkit-transition: line-height 0.85s cubic-bezier(0.77, 0, 0.175, 1);
-  transition: line-height 0.85s cubic-bezier(0.77, 0, 0.175, 1);
+  line-height: 1;
+  /* -webkit-transition: line-height 0.85s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: line-height 0.85s cubic-bezier(0.77, 0, 0.175, 1); */
 }
 
-p {
+div > p {
   font-size: 20px;
   max-width: 830px;
   padding: 0 15px;
   margin: 0 auto;
-  height: 60px;
+  height: 200px;
   overflow: hidden;
-  line-height: 4;
-  -webkit-transition: line-height 0.85s cubic-bezier(0.77, 0, 0.175, 1);
-  transition: line-height 0.85s cubic-bezier(0.77, 0, 0.175, 1);
+  line-height: 2;
+  /* -webkit-transition: line-height 0.85s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: line-height 0.85s cubic-bezier(0.77, 0, 0.175, 1); */
 }
 
 /* text transition */
 
-h2 {
+/* h2 {
   -webkit-transition-delay: .3s;
           transition-delay: .3s;
-}
+} */
 
 p {
   margin-top: -6px;
   font-weight: 100;
-  -webkit-transition-delay: .8s;
-          transition-delay: .8s;
+  /* -webkit-transition-delay: .8s;
+          transition-delay: .8s; */
 }
 
-.section.active h2,
-.section.active p {
+/* .section.active h2 {
   line-height: 1;
 }
+
+.section.active p {
+  line-height: 1.5;
+} */
 
 /* buttons */
 
@@ -70,7 +73,7 @@ p {
 #githubBtn {
   position: absolute;
   right: 20px;
-  top: 49%;
+  top: 50%;
   z-index: 2;
 } 
 
@@ -130,3 +133,16 @@ p {
   top: 85%;
 }
 
+/* project cards */
+.card {
+  margin: 0 auto;
+  width: 18rem;
+  left: 50%;
+  text-align: left;
+  height: 200px;
+}
+
+.card-text {
+  line-height: 1;
+  text-align: left;
+} 
