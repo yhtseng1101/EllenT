@@ -119,18 +119,18 @@ p {
   background: rgba(233, 232, 36, 0.6);
 }
 
-#email {
-  font-size: 1.5em;
-  position: absolute;
-  left: 40%;
-  top: 85%;
-}
-
 #resume {
   font-size: 1.5em;
   position: absolute;
-  left: 48%;
-  top: 85%;
+  left: 22%;
+  top: 58%;
+}
+
+#email {
+  font-size: 1.5em;
+  position: absolute;
+  left: 30%;
+  top: 58%;
 }
 
 /* project cards */
