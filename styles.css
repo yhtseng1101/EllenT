@@ -4,17 +4,29 @@
   background: linear-gradient(-45deg, transparent 25%, white 25%, white 75%, transparent 75%, transparent 100%);
 }
 
-.two {
+.two, 
+.four {
   background: linear-gradient(45deg, transparent 25%, white 25%, white 75%, transparent 75%, transparent 100%);
   text-align: right;
 }
 
+#me {
+  max-width: 270px;
+  z-index: 5;
+  margin-top: -70px;
+}
+
+.four .p {
+  overflow: visible;
+}
+
 /* text arrangement */
 body {
-  font-family: 'Sirin Stencil', cursive;
+  font-family: 'Roboto', sans-serif;
 }
 
 h2 {
+  font-family: 'Balsamiq Sans', cursive;
   font-weight: 400;
   font-size: 40px;
   max-width: 830px;
@@ -23,11 +35,13 @@ h2 {
   height: 60px;
   overflow: hidden;
   line-height: 1;
+  z-index: 1;
   /* -webkit-transition: line-height 0.85s cubic-bezier(0.77, 0, 0.175, 1);
   transition: line-height 0.85s cubic-bezier(0.77, 0, 0.175, 1); */
 }
 
-div > p {
+
+.p {
   font-size: 20px;
   max-width: 830px;
   padding: 0 15px;
@@ -38,6 +52,31 @@ div > p {
   /* -webkit-transition: line-height 0.85s cubic-bezier(0.77, 0, 0.175, 1);
   transition: line-height 0.85s cubic-bezier(0.77, 0, 0.175, 1); */
 }
+
+.title {
+  background-color: rgba(	59, 125, 159, 1);
+  /* background-color: #E9E824; */
+  border-radius: 8px;
+
+}
+
+.title a {
+  color: #E9E824;
+}
+
+ul {
+  position: absolute;
+  margin-top: 1em;
+  z-index: 2;
+  font-family: 'Balsamiq Sans', cursive;
+}
+
+
+/* li > a {
+  color: black;
+} */
+
+
 
 /* text transition */
 
@@ -63,19 +102,31 @@ p {
 
 /* buttons */
 
+#resumeBtn {
+  font-family: 'Balsamiq Sans', cursive;
+  position: absolute;
+  right: 100px;
+  top: 17px;
+  z-index: 2;
+} 
+
 #linkedinBtn {
   position: absolute;
-  right: 20px;
-  top: 45%;
+  right: 60px;
+  top: 15px;
   z-index: 2;
 } 
 
 #githubBtn {
   position: absolute;
   right: 20px;
-  top: 50%;
+  top: 15px;
   z-index: 2;
 } 
+
+#resume {
+  border-color: rgba(233, 232, 36, 0.3);
+}
 
 #linkedin {
   border-color: rgba(233, 232, 36, 0.3);
@@ -94,11 +145,12 @@ p {
     color: #E9E824;}
 }
 
-#projectBtn {
+.projectBtn {
   color: #E9E824;
   background-color: #3B859F;
   border-color: rgba(233, 232, 36, 0.3);
-  font-family: 'Sirin Stencil', cursive;
+  /* font-family: 'Sirin Stencil', cursive; */
+  font-family: 'Balsamiq Sans', cursive;
   position: absolute;
   left: 48%;
   top: 85%;
@@ -113,36 +165,8 @@ p {
   animation-iteration-count: infinite;
 }
 
-#fp-nav ul li a span,
+/* #fp-nav ul li a span,
 .fp-slidesNav ul li a span
 {
   background: rgba(233, 232, 36, 0.6);
-}
-
-#resume {
-  font-size: 1.5em;
-  position: absolute;
-  left: 22%;
-  top: 58%;
-}
-
-#email {
-  font-size: 1.5em;
-  position: absolute;
-  left: 30%;
-  top: 58%;
-}
-
-/* project cards */
-.card {
-  margin: 0 auto;
-  width: 18rem;
-  left: 50%;
-  text-align: left;
-  height: 200px;
-}
-
-.card-text {
-  line-height: 1;
-  text-align: left;
-} 
+} */

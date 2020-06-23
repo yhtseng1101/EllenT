@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168628854-1"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'UA-168628854-1');
+        gtag('config', 'UA-168628854-1');
     </script>
 
     <meta charset="UTF-8">
@@ -16,24 +17,42 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta property="og:image" content="img/IntroPage.png" />
 
-    <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" /> -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" /> -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <!-- <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" /> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- Bootstrap social -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css" />
     <link rel="stylesheet" href="fullpage.css" />
     <link rel="stylesheet" href="styles.css" />
 
-    <link href="https://fonts.googleapis.com/css?family=Sirin+Stencil&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Open+Sans:wght@300&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
     <title>Hi, My Name is Ellen.</title>
 </head>
-<body>
-    
+
+<body onload="checkUri()">
+
     <div>
         <div id="linkedinBtn">
-            <a id="linkedin" class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/ellen-yi-hsuan-tseng/" target="_blank">
+            <a id="linkedin" class="btn btn-social-icon btn-linkedin"
+                href="https://www.linkedin.com/in/ellen-yi-hsuan-tseng/" target="_blank">
                 <i class="fab fa-linkedin-in"></i>
             </a>
         </div>
@@ -42,42 +61,127 @@
                 <i class="fab fa-github"></i>
             </a>
         </div>
+        <div id="resumeBtn">
+            <a id="resume" class="btn btn-secondary btn-sm" href="CV/Resume.pdf" target="_blank">
+                Resume
+            </a>
+        </div>
     </div>
 
+    <ul id="menu">
+        <li data-menuanchor="home" class="active btn"><a href="#home" class="menuBtn">Home</a></li>
+        <li data-menuanchor="about" class="btn"><a href="#about" class="menuBtn">About Me</a></li>
+        <li data-menuanchor="projects" class="btn"><a href="#projects" class="menuBtn">My Projects</a></li>
+        <li data-menuanchor="contact" class="btn"><a href="#contact" class="menuBtn">Connect with Me</a></li>
+    </ul>
+
+
     <div id="fullpage">
-        
+
         <div class="section one">
             <h2>Hi, My name is Ellen.</h2>
-            <p>I am a front-end developer. <br />
-                I love digging into the problems people are facing in their daily lives and finding ways to solve them. I am achieving this life-time passion through expanding my skills in software development.  </p>
-                <span><a href="#projects" class="btn btn-md" id="projectBtn">View My Projects <i class="fas fa-arrow-circle-down"></i></a></span>
+            <div class="p">
+                <p>I am a front-end developer. <br />
+                    I love digging into the problems people are facing in their daily lives and finding ways to solve
+                    them. I am achieving this life-time passion through expanding my skills in software development.
+                </p>
+            </div>
         </div>
 
         <div class="section two">
-            <h2>Projects.</h2>
-            <div class="card" style="width: 30rem;">
-                <img class="card-img-top" src="img/TSApage.png" style="width: 30rem;" alt="Card image cap">
-                <div class="card-body">
-                  <h4 class="card-title">TSA</h4>
-                  <h4 class="card-text">The site was built based on Bootstrap 4. <br /> 
-                    The goal of the website is to establish a way to make information easier to maintain and easier to be distributed to the students.
-                  </h4>
-                  <a href="https://github.com/yhtseng1101/TSA" target="_blank" class="btn btn-primary">GitHub Repo</a> 
-                  <a href="https://ellentsengtsa.netlify.app/" target="_blank" class="btn btn-primary">Web Page</a>
-                </div>
+            <h2>A little more about me.</h2>
+            <div class="p">
+                <p>I was born and raised in Taiwan, the birthplace of bubble milk tea. <br />
+                    I spent 4 years working in an accounting firm after graduated from university, and now I am pursuing a career change to web development and working on building my portfolio <br /> in front-end web development and UI/UX design.
+                </p>
+                <span><a href="#projects" class="btn btn-md projectBtn">View My Projects <i
+                            class="fas fa-arrow-circle-down"></i></a></span>
             </div>
         </div>
 
         <div class="section three">
-            <h2>Contact.</h2>
-            <p>Let's work together. <br />
-                If you like my works, please connect with me on Linkedin or reach out to me via e-mail.  <br />
-                Or check out my resume here.
-                </p>
-            <span id="email"><a href="mailto:yhtseng1101@gmail.com"><button type="button" class="btn btn-primary"><i class="fas fa-envelope"></i> Email </button></a></span>
-            <span id="resume"><a  href="CV/Resume.pdf" target="_blank"><button type="button" class="btn btn-primary"><i class="fas fa-file-user"></i> Resume </button></a></span>
+
+            <div class="slide" id="slide1">
+                <div class="home">
+                    <h2>Click on the Project to see more.</h2>
+                    <div class="p">
+                        <p>
+                            <span class="title"><a href="#projects/1" class="projectSlides">&nbsp;TSA Site </a></span>, a mimic student group page.
+                        </p>
+                        <p>
+                            <span class="title"><a href="#projects/2" class="projectSlides">&nbsp;Currency Exchange Calculator </a></span>, a currecny exchange calculator with "save
+                            search history" function.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="slide" id="slide2">
+                <h2>TSA Site.
+                    <span><a href="https://github.com/yhtseng1101/TSA" target="_blank"
+                            class="btn btn-primary btn-sm btn-light">GitHub
+                            Repo</a></span>
+                    <span><a href="https://ellentsengtsa.netlify.app/" target="_blank"
+                            class="btn btn-primary btn-sm btn-info">Live</a></span>
+                </h2>
+                <div class="p">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img src="img/TSApage.png" alt="TSA Site" style="width: 15rem;" />
+                        </div>
+                        <div class="col">
+                            <p>
+                                This is an individual project built upon Bootstrap 4. <br />
+                                Our student organization has been providing information to students through
+                                booklets, which makes it difficult to update or distribute. The goal of the website
+                                is to make information maintenance and distribution easier.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="slide" id="slide3">
+                <h2>Currency Exchange Calculator.
+                    <span><a href="https://github.com/yhtseng1101/second-mintbean" target="_blank"
+                            class="btn btn-primary btn-sm btn-light">GitHub Repo</a></span>
+                    <span><a href="https://exchangecurrency.netlify.app/" target="_blank"
+                            class="btn btn-primary btn-sm btn-info">Live</a></span>
+                </h2>
+                <div class="p">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img src="img/exchange.png" alt="TSA Site" style="width: 15rem;" /></div>
+                        <div class="col">
+                            <p>A web app built on Bootstrap 4, using data from https://www.exchangerate-api.com. <br />
+                                This currency exchange calculator specializes in a "save result" function, which allows users to compare what they have searched for without needing to write them down.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
- 
+
+        <div class="section four">
+            <h2>Let's connect!</h2>
+            <div class="p">
+                <div class="row">
+                    <div class="col col-sm-4">
+                        <img src="img/Me.png" id="me" />
+                    </div>
+                    <div class="col">
+                        <p>If you like my works, please connect with me on Linkedin or reach out to me at
+                            yhtseng1101@gmail.com.
+                            <br />
+                            Also check out my resume <a href="CV/Resume.pdf" target="_blank">here</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 
@@ -85,20 +189,32 @@
     <script type="text/javascript" src="fullpage.js"></script>
 
     <script>
-            new fullpage('#fullpage', {
-                // sectionsColor: ['#4BBFC3', '#7BAABE', '#ccddff', '#4BBFC3'],
-                sectionsColor: ['#255665', '#3A849E','#255665'],
-                menu: '#menu',
-                anchors:['about', 'projects', 'contact'],
-                navigation: true,
-                navigationPosition: 'left',
-                navigationTooltips: ['About Me', 'Projects', 'Contact'],
-                showActiveTooltip: false,
-                loopBottom: true,
-                
+        new fullpage('#fullpage', {
+            // sectionsColor: ['#4BBFC3', '#7BAABE', '#ccddff', '#4BBFC3'],
+            sectionsColor: ['#255665', '#3A849E', '#255665', '#3A849E'],
+            menu: '#menu',
+            anchors: ['home', 'about', 'projects', 'contact'],
+            // navigation: true,
+            // navigationPosition: 'left',
+            // navigationTooltips: ['About Me', 'Projects', 'Contact'],
+            // showActiveTooltip: false,
+            // loopBottom: true,
+
+            // continuousVertical: true,
+            // afterLoad: function(anchorLink, index){
+            //     console.log("AFTER LOAD - anchorLink:" +anchorLink + " index:" +index );
+            // },
+            // onLeave: function(index, nextIndex, direction){
+            //     console.log("ONLEAVE - index:" +index + " nextIndex:" +nextIndex  + " direction:" + direction);
+
+            // },
+
         });
     </script>
 
+    <script src="index.js"></script>
+
 
 </body>
+
 </html>
