@@ -53,6 +53,11 @@ h2 {
   transition: line-height 0.85s cubic-bezier(0.77, 0, 0.175, 1); */
 }
 
+#projectIndex {
+  min-height: auto;
+  overflow: visible;
+}
+
 .title {
   background-color: rgba(	59, 125, 159, 1);
   /* background-color: #E9E824; */
